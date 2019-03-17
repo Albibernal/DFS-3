@@ -1,0 +1,55 @@
+<!doctype html>
+
+<div class="circle">
+	<style>
+		.circle{
+		  background: blue;
+  		margin-left: 1000px;
+  		margin-top: 100px;
+  		width: 200px;
+  		height: 200px;
+  		border-radius: 50%;
+  		position: absolute;
+  		}
+  	</style>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  		var circle = $(".circle");
+
+  		$( document ).on( "mousemove", function( event ) {
+ 			var screenWidth = $( document ).width();
+  			var cursorX = event.pageX;
+  			var cursorY = event.pageY;
+  			var opacity = (screenWidth - cursorX) / screenWidth ;
+ 		$(".circle").css({
+    		"opacity": opacity,
+    		"left": -cursorX,
+    		"top": -cursorY,
+    		})
+ 		});
+ 	</script>
+</div>
+
+<head>
+	ALBIATO BERNAL
+	<style>
+		.head{
+  			color: green;
+  			font-family: helvetica;
+  			font-style: italic;
+  			position: absolute;
+  		}
+  	</style>
+  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js">
+  		$( document ).on( "mousemove", function( event ) {
+  			var screenWidth = $( document ).width();
+  			var cursorX = event.pageX;
+  			var cursorY = event.pageY;
+  			var opacity = (screenWidth - cursorX) / screenWidth ;
+  		$("h1").css({
+    		"opacity": opacity,
+    		"left": cursorX,
+    		"top": cursorY,
+  			})
+		});
+	</script>
+</head>
